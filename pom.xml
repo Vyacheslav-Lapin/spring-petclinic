@@ -154,8 +154,6 @@
         </executions>
       </plugin>
 
-        <!-- kjbsdkjsdfg -->
-
       <!-- Spring Boot Actuator displays build-related information if a git.properties
         file is present at the classpath -->
       <plugin>
