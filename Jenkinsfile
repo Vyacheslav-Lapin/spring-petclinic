@@ -9,7 +9,7 @@ node {
       //mvnHome = tool 'M3'
    }
    stage('Build') {
-      sh label: 'maven wrapper run...', script: './mvnw -Dmaven.test.failure.ignore varify'
+      sh label: 'maven wrapper run...', script: './mvnw -Dmaven.test.failure.ignore verify'
       // Run the maven build
       //withEnv(["MVN_HOME=$mvnHome"]) {
          //if (isUnix()) {
