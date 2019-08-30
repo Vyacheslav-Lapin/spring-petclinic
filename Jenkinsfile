@@ -21,10 +21,10 @@ node {
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
       archiveArtifacts 'target/*.jar'
-      try {
+   }
+   stage('Email send notification') {
+      catchError(buildResult: 'SUCCESS', message: 'Не шмогла я, не шмогла...') {
         emailext body: 'body of email', subject: 'kjhdfkjhdfg', to: 'Vyacheslav.Lapin@gmail.com'
-      } catch (Throwable e) {
-        echo "Не удалось послать письмо!.."
       }
    }
 }
